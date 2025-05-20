@@ -7,6 +7,7 @@ using Unity.Collections;
 [RequireComponent(typeof(MeshFilter), typeof(MeshCollider))]
 public class ProceduralTerrain : MonoBehaviour
 {
+    public float terrainSize = 50f;
     public int highResWidth = 50;
     public int highResHeight = 50;
     public int lowResWidth = 20;
@@ -37,7 +38,6 @@ public class ProceduralTerrain : MonoBehaviour
         meshCollider = GetComponent<MeshCollider>();
         mainCamera = Camera.main.transform;
 
-        float terrainSize = 50f;
         highResMesh = GenerateMesh(highResWidth, highResHeight, terrainSize, out highResVertices);
         lowResMesh = GenerateMesh(lowResWidth, lowResHeight, terrainSize, out lowResVertices);
 
