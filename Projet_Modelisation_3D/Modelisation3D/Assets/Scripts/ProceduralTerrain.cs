@@ -107,6 +107,7 @@ public class ProceduralTerrain : MonoBehaviour
     {
         Vector3[] vertices = new Vector3[(resolutionWidth + 1) * (resolutionHeight + 1)];
         int[] tris = new int[resolutionWidth * resolutionHeight * 6];
+        Vector2[] uvs = new Vector2[vertices.Length];
 
         for (int i = 0; i <= resolutionWidth; i++)
         {
@@ -140,10 +141,21 @@ public class ProceduralTerrain : MonoBehaviour
             }
         }
 
+        for (int i = 0; i <= resolutionWidth; i++)
+        {
+            for (int j = 0; j <= resolutionHeight; j++)
+            {
+                float u = (float)i / resolutionWidth;
+                float v = (float)j / resolutionHeight;
+                uvs[i * (resolutionHeight + 1) + j] = new Vector2(u, v);
+            }
+        }
+
         Mesh mesh = new Mesh();
         mesh.vertices = vertices;
         mesh.triangles = tris;
         mesh.RecalculateNormals();
+        mesh.uv = uvs;
 
         outVertices = vertices;
         return mesh;
