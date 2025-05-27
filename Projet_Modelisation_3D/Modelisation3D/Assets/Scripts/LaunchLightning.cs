@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LaunchLightning : MonoBehaviour
 {
-    public ParticleSystem effectToPlay;
+    public ParticleSystem [] effectToPlay;
     public float pressDepth = 0.1f;         // How far the button moves down
     public float pressDuration = 0.1f;      // How fast it moves
     private bool playerInRange = false;
@@ -20,7 +20,8 @@ public class LaunchLightning : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.F) && !isPressed)
         {
             if (effectToPlay != null)
-                effectToPlay.Play();
+                for (int i = 0; i < effectToPlay.Length; i++)
+                    effectToPlay[i].Play();
 
             StartCoroutine(AnimateButtonPress());
         }
