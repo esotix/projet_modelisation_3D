@@ -1,18 +1,26 @@
 using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class LaunchLightning : MonoBehaviour
 {
     public ParticleSystem [] effectToPlay;
+    public GameObject Target;
     public float pressDepth = 0.1f;         // How far the button moves down
     public float pressDuration = 0.1f;      // How fast it moves
+    public AudioSource lightningAudio;
+    public float delay;
+
     private bool playerInRange = false;
     private bool isPressed = false;
     private Vector3 originalPosition;
+    private Vector3 targetPosition;
 
     void Start()
     {
         originalPosition = transform.localPosition;
+        targetPosition = new Vector3(1.02600002f, 9.62199974f, 19.1399994f);
     }
 
     void Update()
@@ -22,8 +30,10 @@ public class LaunchLightning : MonoBehaviour
             if (effectToPlay != null)
                 for (int i = 0; i < effectToPlay.Length; i++)
                     effectToPlay[i].Play();
-
+            StartCoroutine(setTarget(0f, targetPosition));
+            StartCoroutine(setTarget(4f, new Vector3(0f,0f,0f)));
             StartCoroutine(AnimateButtonPress());
+            StartCoroutine(PlayWithDelay(delay));
         }
     }
 
@@ -39,7 +49,7 @@ public class LaunchLightning : MonoBehaviour
             playerInRange = false;
     }
 
-    System.Collections.IEnumerator AnimateButtonPress()
+    IEnumerator AnimateButtonPress()
     {
         isPressed = true;
 
@@ -69,5 +79,17 @@ public class LaunchLightning : MonoBehaviour
         transform.localPosition = originalPosition;
 
         isPressed = false;
+    }
+
+    IEnumerator setTarget(float delay, Vector3 targetPosition)
+    {
+        yield return new WaitForSeconds(delay);
+        Target.transform.localPosition = targetPosition;
+    }
+
+    IEnumerator PlayWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        lightningAudio.Play();
     }
 }

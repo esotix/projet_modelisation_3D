@@ -1,143 +1,361 @@
 fileFormatVersion: 2
 guid: 7184c11791413af4da8292a009e57d47
-timeCreated: 1507126336
-licenseType: Store
+AssetOrigin:
+  serializedVersion: 1
+  productId: 61548
+  packageName: Free Animated Space Man
+  packageVersion: 1.0
+  assetPath: Assets/FreeAnimatedSpaceMan/animations_mecanim/Idle.FBX
+  uploadId: 204545
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Arm_02_L
-    100002: Arm_02_R
-    100004: Belt_02
-    100006: Head
-    100008: Helmet_02
-    100010: //RootNode
-    100012: Jets_02
-    100014: LCalf
-    100016: LCollarbone
-    100018: Leg_02_L
-    100020: Leg_02_R
-    100022: LFoot
-    100024: LForearm
-    100026: LPalm
-    100028: LThigh
-    100030: LUpperarm
-    100032: Neck
-    100034: PalmBone001
-    100036: PalmBone001 1
-    100038: PalmBone002
-    100040: PalmBone002 1
-    100042: Pelvis
-    100044: Plane.013
-    100046: RArmCollarbone
-    100048: RArmForearm
-    100050: RArmPalm
-    100052: RArmUpperarm
-    100054: RCalf
-    100056: RFoot
-    100058: Ribcage
-    100060: RThigh
-    100062: SpaceMan_Base
-    100064: SpaceMan_Clothe
-    100066: Spine1
-    100068: Spine2
-    100070: Suit_02
-    400000: Arm_02_L
-    400002: Arm_02_R
-    400004: Belt_02
-    400006: Head
-    400008: Helmet_02
-    400010: //RootNode
-    400012: Jets_02
-    400014: LCalf
-    400016: LCollarbone
-    400018: Leg_02_L
-    400020: Leg_02_R
-    400022: LFoot
-    400024: LForearm
-    400026: LPalm
-    400028: LThigh
-    400030: LUpperarm
-    400032: Neck
-    400034: PalmBone001
-    400036: PalmBone001 1
-    400038: PalmBone002
-    400040: PalmBone002 1
-    400042: Pelvis
-    400044: Plane.013
-    400046: RArmCollarbone
-    400048: RArmForearm
-    400050: RArmPalm
-    400052: RArmUpperarm
-    400054: RCalf
-    400056: RFoot
-    400058: Ribcage
-    400060: RThigh
-    400062: SpaceMan_Base
-    400064: SpaceMan_Clothe
-    400066: Spine1
-    400068: Spine2
-    400070: Suit_02
-    2300000: Arm_02_L
-    2300002: Arm_02_R
-    2300004: Helmet_02
-    2300006: Jets_02
-    2300008: Leg_02_L
-    2300010: Leg_02_R
-    2300012: Plane.013
-    2300014: Suit_02
-    3300000: Arm_02_L
-    3300002: Arm_02_R
-    3300004: Helmet_02
-    3300006: Jets_02
-    3300008: Leg_02_L
-    3300010: Leg_02_R
-    3300012: Plane.013
-    3300014: Suit_02
-    4300000: Belt_02
-    4300002: Leg_02_L
-    4300004: Leg_02_R
-    4300006: Arm_02_L
-    4300008: Helmet_02
-    4300010: Arm_02_R
-    4300012: Suit_02
-    4300014: Jets_02
-    4300016: SpaceMan_Clothe
-    4300018: Plane.013
-    4300020: SpaceMan_Base
-    7400000: Idle
-    9500000: //RootNode
-    13700000: Belt_02
-    13700002: SpaceMan_Base
-    13700004: SpaceMan_Clothe
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_02_L
+  - first:
+      1: 100002
+    second: Arm_02_R
+  - first:
+      1: 100004
+    second: Belt_02
+  - first:
+      1: 100006
+    second: Head
+  - first:
+      1: 100008
+    second: Helmet_02
+  - first:
+      1: 100010
+    second: //RootNode
+  - first:
+      1: 100012
+    second: Jets_02
+  - first:
+      1: 100014
+    second: LCalf
+  - first:
+      1: 100016
+    second: LCollarbone
+  - first:
+      1: 100018
+    second: Leg_02_L
+  - first:
+      1: 100020
+    second: Leg_02_R
+  - first:
+      1: 100022
+    second: LFoot
+  - first:
+      1: 100024
+    second: LForearm
+  - first:
+      1: 100026
+    second: LPalm
+  - first:
+      1: 100028
+    second: LThigh
+  - first:
+      1: 100030
+    second: LUpperarm
+  - first:
+      1: 100032
+    second: Neck
+  - first:
+      1: 100034
+    second: PalmBone001
+  - first:
+      1: 100036
+    second: PalmBone001 1
+  - first:
+      1: 100038
+    second: PalmBone002
+  - first:
+      1: 100040
+    second: PalmBone002 1
+  - first:
+      1: 100042
+    second: Pelvis
+  - first:
+      1: 100044
+    second: Plane.013
+  - first:
+      1: 100046
+    second: RArmCollarbone
+  - first:
+      1: 100048
+    second: RArmForearm
+  - first:
+      1: 100050
+    second: RArmPalm
+  - first:
+      1: 100052
+    second: RArmUpperarm
+  - first:
+      1: 100054
+    second: RCalf
+  - first:
+      1: 100056
+    second: RFoot
+  - first:
+      1: 100058
+    second: Ribcage
+  - first:
+      1: 100060
+    second: RThigh
+  - first:
+      1: 100062
+    second: SpaceMan_Base
+  - first:
+      1: 100064
+    second: SpaceMan_Clothe
+  - first:
+      1: 100066
+    second: Spine1
+  - first:
+      1: 100068
+    second: Spine2
+  - first:
+      1: 100070
+    second: Suit_02
+  - first:
+      4: 400000
+    second: Arm_02_L
+  - first:
+      4: 400002
+    second: Arm_02_R
+  - first:
+      4: 400004
+    second: Belt_02
+  - first:
+      4: 400006
+    second: Head
+  - first:
+      4: 400008
+    second: Helmet_02
+  - first:
+      4: 400010
+    second: //RootNode
+  - first:
+      4: 400012
+    second: Jets_02
+  - first:
+      4: 400014
+    second: LCalf
+  - first:
+      4: 400016
+    second: LCollarbone
+  - first:
+      4: 400018
+    second: Leg_02_L
+  - first:
+      4: 400020
+    second: Leg_02_R
+  - first:
+      4: 400022
+    second: LFoot
+  - first:
+      4: 400024
+    second: LForearm
+  - first:
+      4: 400026
+    second: LPalm
+  - first:
+      4: 400028
+    second: LThigh
+  - first:
+      4: 400030
+    second: LUpperarm
+  - first:
+      4: 400032
+    second: Neck
+  - first:
+      4: 400034
+    second: PalmBone001
+  - first:
+      4: 400036
+    second: PalmBone001 1
+  - first:
+      4: 400038
+    second: PalmBone002
+  - first:
+      4: 400040
+    second: PalmBone002 1
+  - first:
+      4: 400042
+    second: Pelvis
+  - first:
+      4: 400044
+    second: Plane.013
+  - first:
+      4: 400046
+    second: RArmCollarbone
+  - first:
+      4: 400048
+    second: RArmForearm
+  - first:
+      4: 400050
+    second: RArmPalm
+  - first:
+      4: 400052
+    second: RArmUpperarm
+  - first:
+      4: 400054
+    second: RCalf
+  - first:
+      4: 400056
+    second: RFoot
+  - first:
+      4: 400058
+    second: Ribcage
+  - first:
+      4: 400060
+    second: RThigh
+  - first:
+      4: 400062
+    second: SpaceMan_Base
+  - first:
+      4: 400064
+    second: SpaceMan_Clothe
+  - first:
+      4: 400066
+    second: Spine1
+  - first:
+      4: 400068
+    second: Spine2
+  - first:
+      4: 400070
+    second: Suit_02
+  - first:
+      23: 2300000
+    second: Arm_02_L
+  - first:
+      23: 2300002
+    second: Arm_02_R
+  - first:
+      23: 2300004
+    second: Helmet_02
+  - first:
+      23: 2300006
+    second: Jets_02
+  - first:
+      23: 2300008
+    second: Leg_02_L
+  - first:
+      23: 2300010
+    second: Leg_02_R
+  - first:
+      23: 2300012
+    second: Plane.013
+  - first:
+      23: 2300014
+    second: Suit_02
+  - first:
+      33: 3300000
+    second: Arm_02_L
+  - first:
+      33: 3300002
+    second: Arm_02_R
+  - first:
+      33: 3300004
+    second: Helmet_02
+  - first:
+      33: 3300006
+    second: Jets_02
+  - first:
+      33: 3300008
+    second: Leg_02_L
+  - first:
+      33: 3300010
+    second: Leg_02_R
+  - first:
+      33: 3300012
+    second: Plane.013
+  - first:
+      33: 3300014
+    second: Suit_02
+  - first:
+      43: 4300000
+    second: Belt_02
+  - first:
+      43: 4300002
+    second: Leg_02_L
+  - first:
+      43: 4300004
+    second: Leg_02_R
+  - first:
+      43: 4300006
+    second: Arm_02_L
+  - first:
+      43: 4300008
+    second: Helmet_02
+  - first:
+      43: 4300010
+    second: Arm_02_R
+  - first:
+      43: 4300012
+    second: Suit_02
+  - first:
+      43: 4300014
+    second: Jets_02
+  - first:
+      43: 4300016
+    second: SpaceMan_Clothe
+  - first:
+      43: 4300018
+    second: Plane.013
+  - first:
+      43: 4300020
+    second: SpaceMan_Base
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Belt_02
+  - first:
+      137: 13700002
+    second: SpaceMan_Base
+  - first:
+      137: 13700004
+    second: SpaceMan_Clothe
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween
-      bone rotation in copied configuration does not match rotation in animation
-      file\nIdle\nClip 'Take 001' has import animation warnings that might lower
-      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
-      quality.\n\t'Ribcage' is inbetween humanoid transforms and has rotation animation
-      that will be discarded.\n"
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Ribcage' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 1480
       lastFrame: 1509
       wrapMode: 0
@@ -236,33 +454,56 @@ ModelImporter:
         weight: 0
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1480
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: LThigh
       humanName: LeftUpperLeg
@@ -445,8 +686,7 @@ ModelImporter:
     - name: Leg_02_L
       parentName: LCalf
       position: {x: -0.0000000047683715, y: 8.9406965e-10, z: 0}
-      rotation: {x: -0.00000004377216, y: 0.000000044703487, z: -0.000000048428774,
-        w: 1}
+      rotation: {x: -0.00000004377216, y: 0.000000044703487, z: -0.000000048428774, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: LFoot
       parentName: LCalf
@@ -471,8 +711,7 @@ ModelImporter:
     - name: Leg_02_R
       parentName: RCalf
       position: {x: 0.0000000333786, y: -0.000000050365923, z: 0}
-      rotation: {x: -0.00000062584905, y: -0.0000007636838, z: -0.00000047683733,
-        w: 1}
+      rotation: {x: -0.00000062584905, y: -0.0000007636838, z: -0.00000047683733, w: 1}
       scale: {x: 1.0000012, y: 0.9999997, z: 0.99999887}
     - name: RFoot
       parentName: RCalf
@@ -606,23 +845,20 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 90dac3abf1179b342b84e3c83039fa77,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 90dac3abf1179b342b84e3c83039fa77, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 61548
-  packageName: Free Animated Space Man
-  packageVersion: 1.0
-  assetPath: Assets/FreeAnimatedSpaceMan/animations_mecanim/Idle.FBX
-  uploadId: 204545
