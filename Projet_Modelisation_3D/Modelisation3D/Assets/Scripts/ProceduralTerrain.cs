@@ -27,6 +27,9 @@ public class ProceduralTerrain : MonoBehaviour
 
     public NavMeshSurface navSurface;
 
+    public GameObject trapZonePrefab;
+    public int numberOfTraps = 20;
+
     private Vector3[] highResVertices;
     private Vector3[] lowResVertices;
     private int[] triangles;
@@ -59,6 +62,7 @@ public class ProceduralTerrain : MonoBehaviour
         SpawnEnvironmentObjects(highResVertices);
 
         navSurface.BuildNavMesh();
+        PlaceRandomTraps();
     }
 
     void Update()
@@ -208,7 +212,9 @@ public class ProceduralTerrain : MonoBehaviour
             if (GrassPrefab != null && Random.value < 0.5f)
             {
                 Quaternion grassRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-                Instantiate(GrassPrefab, worldPos, grassRotation, transform);
+                GameObject Grass = Instantiate(GrassPrefab, worldPos, grassRotation, transform);
+                var modifier = Grass.AddComponent<NavMeshModifier>();
+                modifier.overrideArea = true;
             }
 
             // Randomly place Trees
@@ -225,10 +231,27 @@ public class ProceduralTerrain : MonoBehaviour
             if (FirePrefab != null && Random.value < 0.03f)
             {
                 Quaternion fireRotation = Quaternion.Euler(-90f, 0f, 0f);
-                Instantiate(FirePrefab, worldPos, fireRotation, transform);
+                GameObject Fire = Instantiate(FirePrefab, worldPos, fireRotation, transform);
+                var modifier = Fire.AddComponent<NavMeshModifier>();
+                modifier.overrideArea = true;
+                modifier.area = 1; // "Not Walkable"  
             }
         }
         navSurface.BuildNavMesh();
+    }
+
+    void PlaceRandomTraps()
+    {
+        for (int i = 0; i < numberOfTraps; i++)
+        {
+            Vector3 randomPos = new Vector3(
+                Random.Range(0f, terrainSize),
+                0f, // You may need to raycast to terrain height
+                Random.Range(0f, terrainSize)
+            );
+
+            Instantiate(trapZonePrefab, randomPos, Quaternion.identity);
+        }
     }
 
 }
