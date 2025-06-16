@@ -3,6 +3,8 @@ using UnityEngine;
 using Unity.Jobs;
 using Unity.Burst;
 using Unity.Collections;
+using UnityEditor;
+using Unity.AI.Navigation;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshCollider))]
 public class ProceduralTerrain : MonoBehaviour
@@ -18,6 +20,12 @@ public class ProceduralTerrain : MonoBehaviour
     public float radius = 5f;
     public float deformationStrength = 1f;
     public float LODDistance = 30f;
+
+    public GameObject FirePrefab;
+    public GameObject GrassPrefab;
+    public GameObject TreePrefab;
+
+    public NavMeshSurface navSurface;
 
     private Vector3[] highResVertices;
     private Vector3[] lowResVertices;
@@ -48,6 +56,9 @@ public class ProceduralTerrain : MonoBehaviour
         // Appliquer le mesh haute résolution par défaut
         meshFilter.mesh = highResMesh;
         meshCollider.sharedMesh = highResMesh;
+        SpawnEnvironmentObjects(highResVertices);
+
+        navSurface.BuildNavMesh();
     }
 
     void Update()
@@ -186,4 +197,38 @@ public class ProceduralTerrain : MonoBehaviour
         if (nativeVertices.IsCreated)
             nativeVertices.Dispose();
     }
+
+    void SpawnEnvironmentObjects(Vector3[] vertices)
+    {
+        foreach (Vector3 vertex in vertices)
+        {
+            Vector3 worldPos = transform.TransformPoint(vertex);
+
+            // Randomly place grass
+            if (GrassPrefab != null && Random.value < 0.5f)
+            {
+                Quaternion grassRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                Instantiate(GrassPrefab, worldPos, grassRotation, transform);
+            }
+
+            // Randomly place Trees
+            if (TreePrefab != null && Random.value < 0.1f)
+            {
+                Quaternion TreeRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                GameObject Tree = Instantiate(TreePrefab, worldPos, TreeRotation, transform);
+                var modifier = Tree.AddComponent<NavMeshModifier>();
+                modifier.overrideArea = true;
+                modifier.area = 1; // "Not Walkable"    
+            }
+
+            // Randomly place fire
+            if (FirePrefab != null && Random.value < 0.03f)
+            {
+                Quaternion fireRotation = Quaternion.Euler(-90f, 0f, 0f);
+                Instantiate(FirePrefab, worldPos, fireRotation, transform);
+            }
+        }
+        navSurface.BuildNavMesh();
+    }
+
 }

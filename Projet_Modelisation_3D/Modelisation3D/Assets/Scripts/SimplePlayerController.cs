@@ -12,9 +12,16 @@ public class SimplePlayerController : MonoBehaviour
     public float mouseSensitivity = 100f;
     public Transform cameraTransform;
 
+    [Header("Ground")]
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
     private CharacterController controller;
     private Vector3 velocity;
     private float xRotation = 0f;
+
+
 
     void Start()
     {
@@ -32,23 +39,31 @@ public class SimplePlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
         controller.Move(move * speed * Time.deltaTime);
 
-        // Jumping
-        if (controller.isGrounded)
-        {
-            if (velocity.y < 0)
-                velocity.y = -2f;
+        bool wasGrounded = IsGrounded();
 
-            if (Input.GetButtonDown("Jump"))
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        if (wasGrounded && velocity.y < 0)
+        {
+            velocity.y = -0.5f;
         }
 
-        // Apply gravity
+        if (wasGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    bool IsGrounded()
+    {
+        return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+    }
+
 
     void HandleMouseLook()
     {
