@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    public Transform targetToFollow;
+    private Transform targetToFollow;
     public Transform ikTarget;
-
+    private void Start()
+    {
+    }
     void Update()
     {
+        if (targetToFollow == null) targetToFollow = GameObject.FindGameObjectWithTag("Target").transform;
         ikTarget.position = targetToFollow.position;
-        Debug.DrawLine(ikTarget.position, ikTarget.position + Vector3.up, Color.red);
     }
 }
