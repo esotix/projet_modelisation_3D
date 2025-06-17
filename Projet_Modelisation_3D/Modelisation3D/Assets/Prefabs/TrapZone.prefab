@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 471418802998203208}
   - component: {fileID: 8122401802337851734}
   - component: {fileID: 8613953093002775193}
+  - component: {fileID: 3224792144993665775}
   m_Layer: 0
   m_Name: TrapZone
   m_TagString: Untagged
@@ -71,3 +72,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 16.41, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3224792144993665775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005836391636827800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d2b3d2af7e6ce4db5c7490f3e7902c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

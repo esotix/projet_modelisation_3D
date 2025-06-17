@@ -6279,7 +6279,7 @@ MonoBehaviour:
   EndZonePrefab: {fileID: 8659916844567290157, guid: 7aaf0216d0015644b81957d9119ab3f0, type: 3}
   navSurface: {fileID: 1795066574}
   trapZonePrefab: {fileID: 9005836391636827800, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-  numberOfTraps: 20
+  numberOfTraps: 50
 --- !u!23 &1795066570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6494,67 +6494,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4789241475065248, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
   m_PrefabInstance: {fileID: 1006144832}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2203839300968441617
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471418802998203208, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8122401802337851734, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: navSurface
-      value: 
-      objectReference: {fileID: 1795066574}
-    - target: {fileID: 9005836391636827800, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
-      propertyPath: m_Name
-      value: TrapZone
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ec25a0304b62734298f5a2c56008c8a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6564,4 +6503,3 @@ SceneRoots:
   - {fileID: 121082778}
   - {fileID: 612382357}
   - {fileID: 128090151}
-  - {fileID: 2203839300968441617}

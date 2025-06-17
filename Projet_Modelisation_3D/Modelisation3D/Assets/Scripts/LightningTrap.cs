@@ -60,7 +60,7 @@ public class FireTrapZone : MonoBehaviour
 
             // 4. Spawn fire at ground point
             Quaternion fireRotation = Quaternion.Euler(-90f, 0f, 0f);
-            GameObject fire = Instantiate(firePrefab, groundPosition, fireRotation);
+            GameObject fire = Instantiate(firePrefab, groundPosition - Vector3.up * 3f, fireRotation);
 
             // 5. Block navmesh
             var mod = fire.AddComponent<NavMeshModifier>();

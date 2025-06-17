@@ -29,7 +29,7 @@ public class ProceduralTerrain : MonoBehaviour
     public NavMeshSurface navSurface;
 
     public GameObject trapZonePrefab;
-    public int numberOfTraps = 20;
+    public int numberOfTraps = 50;
 
     private Vector3[] highResVertices;
     private Vector3[] lowResVertices;
