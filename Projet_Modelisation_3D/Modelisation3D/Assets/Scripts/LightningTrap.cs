@@ -48,7 +48,7 @@ public class FireTrapZone : MonoBehaviour
             Vector3 groundPosition = hit.point;
 
             // 1. Spawn lightning effect slightly above hit point
-            GameObject lightning = Instantiate(lightningEffectPrefab, groundPosition + Vector3.up * 5f, Quaternion.identity);
+            GameObject lightning = Instantiate(lightningEffectPrefab, groundPosition + Vector3.up * 3f, Quaternion.identity);
             lightning.transform.LookAt(groundPosition);
 
             // 2. Play lightning sound
@@ -59,7 +59,8 @@ public class FireTrapZone : MonoBehaviour
             yield return new WaitForSeconds(fireDelay);
 
             // 4. Spawn fire at ground point
-            GameObject fire = Instantiate(firePrefab, groundPosition, Quaternion.identity);
+            Quaternion fireRotation = Quaternion.Euler(-90f, 0f, 0f);
+            GameObject fire = Instantiate(firePrefab, groundPosition, fireRotation);
 
             // 5. Block navmesh
             var mod = fire.AddComponent<NavMeshModifier>();

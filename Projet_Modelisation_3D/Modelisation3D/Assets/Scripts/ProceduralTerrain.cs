@@ -24,6 +24,7 @@ public class ProceduralTerrain : MonoBehaviour
     public GameObject FirePrefab;
     public GameObject GrassPrefab;
     public GameObject TreePrefab;
+    public GameObject EndZonePrefab;
 
     public NavMeshSurface navSurface;
 
@@ -63,6 +64,7 @@ public class ProceduralTerrain : MonoBehaviour
 
         navSurface.BuildNavMesh();
         PlaceRandomTraps();
+        PlaceRandomEndZOne();
     }
 
     void Update()
@@ -246,12 +248,23 @@ public class ProceduralTerrain : MonoBehaviour
         {
             Vector3 randomPos = new Vector3(
                 Random.Range(0f, terrainSize),
-                0f, // You may need to raycast to terrain height
+                0f,
                 Random.Range(0f, terrainSize)
             );
 
             Instantiate(trapZonePrefab, randomPos, Quaternion.identity);
         }
+    }
+
+    void PlaceRandomEndZOne()
+    {
+        Vector3 randomPos = new Vector3(
+        Random.Range(0f, terrainSize),
+        2f,
+        Random.Range(0f, terrainSize)
+        );
+
+        Instantiate(EndZonePrefab, randomPos, Quaternion.identity);
     }
 
 }
